@@ -1,0 +1,25 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# 环境变量示例（实际使用时需要替换为真实值）
+[build.environment]
+  # VITE_SUPABASE_URL = "your-supabase-url"
+  # VITE_SUPABASE_ANON_KEY = "your-anon-key"
+
+# 配置缓存以提高构建速度
+[[plugins]]
+  package = "@netlify/plugin-cache"
+    [plugins.inputs]
+    paths = [
+      "node_modules",
+      ".npm"
+    ]
