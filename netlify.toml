@@ -2,9 +2,6 @@
   command = "npm run build"
   publish = "dist"
 
-[build.environment]
-  NODE_VERSION = "18"
-
 [[redirects]]
   from = "/*"
   to = "/index.html"
@@ -12,8 +9,9 @@
 
 # 环境变量示例（实际使用时需要替换为真实值）
 [build.environment]
-  # VITE_SUPABASE_URL = "your-supabase-url"
-  # VITE_SUPABASE_ANON_KEY = "your-anon-key"
+ NODE_VERSION = "18"
+  # VITE_SUPABASE_URL = "https://kzzuloyfxssnixfviwjr.supabase.co"
+  # VITE_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt6enVsb3lmeHNzbml4ZnZpd2pyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwOTkxNzAsImV4cCI6MjA3ODY3NTE3MH0.YWrL5BIeCdlPgDA_X21vUtuzcllDvtjU3iHEzbxqLaQ"
 
 # 配置缓存以提高构建速度
 [[plugins]]
