@@ -9,9 +9,9 @@ const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
 // 检查是否提供了有效的 Supabase 配置
 const isSupabaseConfigured = supabaseUrl && 
                            supabaseUrl.startsWith('http') && 
-                           !supabaseUrl.includes('your-supabase-url') &&
+                           !supabaseUrl.includes('https://kzzuloyfxssnixfviwjr.supabase.co') &&
                            supabaseAnonKey && 
-                           !supabaseAnonKey.includes('your-anon-key')
+                           !supabaseAnonKey.includes('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt6enVsb3lmeHNzbml4ZnZpd2pyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwOTkxNzAsImV4cCI6MjA3ODY3NTE3MH0.YWrL5BIeCdlPgDA_X21vUtuzcllDvtjU3iHEzbxqLaQ')
 
 const supabase = isSupabaseConfigured ? createClient(supabaseUrl, supabaseAnonKey) : null
 
